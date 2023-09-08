@@ -1,0 +1,26 @@
+<!-- Content -->
+<section id="layout-content">
+   <div>
+     <div class="text-center">
+      <form class="form-group" enctype="multipart/form-data" action="/api/upload" method="POST">
+        <div class="input-group input-group-lg">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="upfile" name="upfile" accept=".csv" aria-describedby="upfile" onchange="label=getElementById('lupfile'); label.innerHTML=this.value.replace(/^.*[\\\/]/, '');">
+            <label class="custom-file-label" for="upfile" id="lupfile">Select File</label>
+          </div>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-success" id="upbtn" onclick="this.innerHTML='<span class=\'spinner-border spinner-border-sm\'></span>'">Отправить</button>
+          </div>
+        </div>
+      </form>
+   </div>
+  </div>
+<!-- Content -->
+</section>
+
+
+
+
+
+
+

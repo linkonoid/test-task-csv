@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+{% include '/layouts/head.htm' with {'title': contentTitle}  %}
+
+<body>
+
+{% include '/layouts/header.htm' %}
+
+    <!-- Content -->
+    <section id="layout-content">
+        <div class="d-flex align-items-center justify-content-center vh-100">
+            <div class="text-center">
+
+              {% include contentLayout %}
+
+            </div>
+        </div>
+    <!-- Content -->
+    </section>
+
+{% include '/layouts/footer.htm' %}
+
+</body>
+
+</html>
+

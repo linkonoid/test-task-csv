@@ -1,0 +1,91 @@
+twig:
+  cache: false
+  cache_folder: '/storage/cache'
+db:
+  driver: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: test65
+  username: admin
+  password: 220609
+  models:
+    price:
+      name: 'Прайс-лист'
+      fields:
+        code: 
+          name: 'Код'
+          type: string
+          length: 30
+        name: 
+          name: 'Наименование'
+          type: string
+          length: 255
+        level1: 
+          name: 'Уровень1'
+          type: string
+          length: 100
+        level2: 
+          name: 'Уровень2'
+          type: string
+          length: 100
+        level3: 
+          name: 'Уровень3'
+          type: string
+          length: 100
+        price: 
+          name: 'Цена'
+          type: decimal
+          length: 2
+        price_jp: 
+          name: 'ЦенаСП'
+          type: decimal
+          length: 2
+        count: 
+          name: 'Количество'
+          type: decimal
+          length: 2
+        properties: 
+          name: 'Поля свойств'
+          type: string
+          length: 255
+        joint_purchases: 
+          name: 'Совместные покупки'
+          type: bool
+          length: 1
+        unit: 
+          name: 'Единица измерения'
+          type: string
+          length: 10
+        picture: 
+          name: 'Картинка'
+          type: string
+          length: 150
+        on_index: 
+          name: 'Выводить на главной'
+          type: bool
+          length: 1
+        description: 
+          name: 'Описание'
+          type: string
+          length: 500
+routes:
+  index:
+    method: get
+    route: '/'
+    path: '/views/index.php'
+  upload_form:
+    method: get
+    route: '/upload'
+    path: '/views/upload.php'
+  upload_api:
+    method: post
+    route: '/api/upload'
+    path: '/api/upload.php'
+  price:
+    method: get
+    route: '/price'
+    path: '/views/price.php'
+  404:
+    method: any
+    route: '/404'
+    path: '/views/404.php'

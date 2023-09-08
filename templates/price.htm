@@ -1,0 +1,32 @@
+    <!-- Content -->
+    <section id="layout-content">
+        <div class="d-flex align-items-start justify-content-top vh-100">
+            <div class="text-center">
+<table class="table table-sm">
+  <thead>
+    <tr>
+     {% for item in fields %}
+	<th scope="col" class="align-text-top">{{item.name}}</th>
+     {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+     {% for item in data %}
+<tr>
+        {% for key, value in item %}
+
+{% if key == 'code' %}
+   <th scope="row">{{value}}</th>
+{% else %}
+   <td class="text-left">{{value}}</td>
+{% endif %}
+
+        {% endfor %}
+</tr>
+     {% endfor %}
+  </tbody>
+</table>
+            </div>
+        </div>
+    <!-- Content -->
+    </section>
